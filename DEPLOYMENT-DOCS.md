@@ -57,17 +57,23 @@ APP_SECRET_KEY=ANY_UUID
 
 **Step 9:** Click Deploy web service.
 
-It can take 5-10min for deployment. Try visiting your render web-server URL to check if admin panel is deployed.
+It can take 5-10min for deployment. Try visiting your render web-server URL to check if admin panel is deployed.  
+> **Note:** Make sure to copy or save your admin panel URL as it will be needed later.
 
 ---
 
-# Build the Payload
-
-# Payload Deployment
+# CDN-Repository Setup
 It's not necessory to use github for payload deployment. You can use any cloud storage which allow to upload file and give permanent download url to the files.  
 Github public repository is not best for this but it's enough for basic setup.
 
-### To deploy payload using github follow along:-  
 **Step 1:** Login into your github account.  
-**Step 2:** Create a new public repository.  
-**Step 2:** Upload `payload.txt`, `updator.txt` and `servers.json` into the repository.  
+**Step 2:** Create a new public repository with anyname you like.
+**Step 3:** Note down the following information:-
+* Github username  
+* Repository name  
+* Branch name (generally main)  
+
+# Build the Payload & Deploy
+**Step 1:** Download the latest *WAF4-Builder* from [here](https://github.com/PowerPizza/WAF4-Builder-Public/releases)  
+**Step 2:** Follow WAF4-Builder [docs](https://github.com/PowerPizza/WAF4-Builder-Public/tree/main#waf4-builder)  
+**Step 3:** Upload the files you just got in `output` directory from WAF4-Builder into the git repository created earlier.
