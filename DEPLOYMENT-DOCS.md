@@ -11,29 +11,6 @@ Before starting, make sure you have:
 * A computer with Windows installed
 * A GitHub account
 * A Render account
-* Python installed
-* Pip installed and working
-
-To verify Python and Pip are installed:
-
-1. Open **Command Prompt**.
-2. Run:
-
-```bash
-python --version
-```
-
-You should see a Python version number.
-
-3. Run:
-
-```bash
-pip --version
-```
-
-You should see a Pip version number.
-
-If either command fails, install Python from https://python.org and ensure the **"Add Python to PATH"** option is enabled during installation.
 
 ---
 
@@ -72,6 +49,8 @@ Github public repository is not best for this but it's enough for basic setup.
 * Github username  
 * Repository name  
 * Branch name (generally main)  
+
+---
 
 # Build the Payload & Deploy
 **Step 1:** Download the latest *WAF4-Builder* from [here](https://github.com/PowerPizza/WAF4-Builder-Public/releases)  
