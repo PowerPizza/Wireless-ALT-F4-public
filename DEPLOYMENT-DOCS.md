@@ -44,7 +44,7 @@ It's not necessory to use github for payload deployment. You can use any cloud s
 Github public repository is not best for this but it's enough for basic setup.
 
 **Step 1:** Login into your github account.  
-**Step 2:** Create a new public repository with anyname you like.
+**Step 2:** Create a new public repository with anyname you like.  
 **Step 3:** Note down the following information:-
 * Github username  
 * Repository name  
