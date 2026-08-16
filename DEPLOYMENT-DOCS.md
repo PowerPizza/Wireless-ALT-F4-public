@@ -108,3 +108,12 @@ Replace the placeholders of above template URL with appropite values as defiend 
 **Step 1:** Download the latest *WAF4-Builder* from [here](https://github.com/PowerPizza/WAF4-Builder-Public/releases)  
 **Step 2:** Follow WAF4-Builder [docs](https://github.com/PowerPizza/WAF4-Builder-Public/tree/main#waf4-builder)  
 **Step 3:** Upload the files you just got in `output` directory from WAF4-Builder into the git repository created earlier.
+
+# Test the payload
+**Setp 1:** Go into output directory.  
+**Step 2:** Rename `payload.txt` to `payload.exe`  
+**Step 3:** Double click and run the payload.  
+**Step 4:** Check at your deployed admin panel, your system should be available under target list.  
+**Step 5:** To stop open task manager and end the payload.exe ask & optionally you can delete output directory.  
+
+> Note: Recommended to turn of windows defender while testing your payload.
