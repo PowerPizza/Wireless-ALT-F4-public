@@ -52,6 +52,58 @@ Github public repository is not best for this but it's enough for basic setup.
 
 ---
 
+# Create URLs
+Since using github for payload hosting so there need to create raw github urls pointing to payload and other files that will be uploaded in this directory in next section.
+
+Why are these URLs needed? [checkout here](https://github.com/PowerPizza/WAF4-Builder-Public/tree/main#waf4-builder) 
+
+Template : `https://raw.githubusercontent.com/<USERNAME>/<REPOSITORY>/<BRANCH>/<FILE_NAME>`
+
+## Creating PAYLOAD_HOST_URL
+Replace the placeholders of above template URL with appropite values as defiend in table below:
+| Placeholder | Replace with |
+| ----------- | ------------ |
+| USERNAME | Your github username |
+| REPOSITORY | Name of repository created in above section. |
+| BRANCH | Name of branch of that repository (generally main) |
+| FILE_NAME | payload.txt |
+
+## Creating UPDATOR_HOST_URL
+Replace the placeholders of above template URL with appropite values as defiend in table below:
+| Placeholder | Replace with |
+| ----------- | ------------ |
+| USERNAME | Your github username |
+| REPOSITORY | Name of repository created in above section. |
+| BRANCH | Name of branch of that repository (generally main) |
+| FILE_NAME | updator.txt |
+
+> Note : As current latest version of WAF4-Builder is v1.1.0 which outputs payload.txt and updator.txt files that's why using payload.txt, updator.txt file names - In feature it may output files with different names so then we have to use those file names here, please check the release notes of WAF4-Builder.
+
+## Creating Redirector File & REDIRECTOR_FILE_URL
+**Note:** If you are certain that your admin panel URL will never change in feature or you have linked custom domain to your admin panel then you can skip this step.
+
+**Step 1:** Create a new file in repository with the following content:  
+```json
+{
+    "url": "<URL_OF_ADMIN_PANEL>"
+}
+```
+**Step 2:** Save/Commit file in repository with name `servers.json`  
+**Step 3:** Replace the placeholders of above template URL with appropite values as defiend in table below:
+| Placeholder | Replace with |
+| ----------- | ------------ |
+| USERNAME | Your github username |
+| REPOSITORY | Name of repository created in above section. |
+| BRANCH | Name of branch of that repository (generally main) |
+| FILE_NAME | servers.json |
+
+### Now you will have 2 or 3 URLs as follows:
+| Type | URL |
+| ----- | ---- |
+| PAYLOAD_HOST_URL | `https://raw.githubusercontent.com/<USERNAME>/<REPOSITORY>/<BRANCH>/payload.txt` |  
+|UPDATOR_HOST_URL | `https://raw.githubusercontent.com/<USERNAME>/<REPOSITORY>/<BRANCH>/updator.txt` |
+| (Optionally) REDIRECTOR_FILE_URL | `https://raw.githubusercontent.com/<USERNAME>/<REPOSITORY>/<BRANCH>/servers.json` |  
+
 # Build the Payload & Deploy
 **Step 1:** Download the latest *WAF4-Builder* from [here](https://github.com/PowerPizza/WAF4-Builder-Public/releases)  
 **Step 2:** Follow WAF4-Builder [docs](https://github.com/PowerPizza/WAF4-Builder-Public/tree/main#waf4-builder)  
