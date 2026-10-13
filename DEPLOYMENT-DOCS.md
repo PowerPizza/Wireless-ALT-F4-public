@@ -37,6 +37,44 @@ APP_SECRET_KEY=ANY_UUID
 It can take 5-10min for deployment. Try visiting your render web-server URL to check if admin panel is deployed.  
 > **Note:** Make sure to copy or save your admin panel URL as it will be needed later.
 
+## Update WAF4 Web Server (Admin Panel)
+If the WAF4 Admin Panel is hosted on [Render](https://render.com/), updating the deployed version is straightforward. Follow the steps below to deploy the latest WAF4 Admin Panel image.
+
+### Prerequisites
+- Access to the Render account where the WAF4 Admin Panel is currently hosted.
+- The required WAF4 Docker image version must be available on the [WAF4 Docker Hub repository](https://hub.docker.com/r/scihack/waf4).
+
+### Deployment Steps
+1. **Log in to Render**
+
+   Sign in to your Render account where the WAF4 Admin Panel is currently hosted.
+
+2. **Select the WAF4 Service**
+
+   Open the project containing the WAF4 Admin Panel and select the service where WAF4 is hosted.
+
+3. **Open Service Settings**
+
+   From the left-hand navigation panel, select **Settings**.
+
+4. **Update the Docker Image Version**
+
+   Under the **Image** section, click **Edit** next to the image source.
+
+   Update **only the image version/tag** to the latest version available in the [WAF4 Docker Hub repository](https://hub.docker.com/r/scihack/waf4).
+
+   > **Note:** Do not modify the image repository or any other configuration unless required.
+
+5. **Deploy the Updated Version**
+
+   Click **Connect** to apply the updated image configuration.
+
+   Render will pull the specified Docker image and automatically deploy the updated WAF4 Admin Panel.
+
+### Verification
+
+After deployment completes, open the WAF4 Admin Panel and verify that the updated version is running correctly.
+
 ---
 
 # CDN-Repository Setup
